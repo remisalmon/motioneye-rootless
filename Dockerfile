@@ -17,4 +17,4 @@ RUN mkdir /motioneye && cat /usr/local/share/motioneye/extra/motioneye.conf.samp
 
 CMD meyectl startserver -c motioneye.conf
 
-EXPOSE 876
+EXPOSE 8765
