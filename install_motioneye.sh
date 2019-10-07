@@ -1,10 +1,12 @@
 #!/bin/bash
 
+VENV_FOLDER=$(pwd)/venv27
+
 MOTIONEYE_FOLDER=$(pwd)/motioneye
 
-python2 -m virtualenv venv27
+python2 -m virtualenv $VENV_FOLDER
 
-source venv27/bin/activate
+source $VENV_FOLDER/bin/activate
 
 pip install --upgrade pip
 
