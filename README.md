@@ -6,9 +6,9 @@ Scripts to install and run motioneye withour root privileges (locally or in Dock
 
 ### Installing motioneye
 
-Install motioneye dependencies (`motion`, `ffmpeg`, `v4l-utils`, see https://github.com/ccrisan/motioneye/wiki/Installation for more details)
+Install motioneye dependencies (`motion ffmpeg v4l-utils`, see https://github.com/ccrisan/motioneye/wiki/Installation)
 
-Run `install_motioneye.sh`  (installs motioneye to a Python2 virtual environment in `$(pwd)/venv27`)
+Run `install_motioneye.sh` (installs motioneye to a Python2 virtual environment in `$(pwd)/venv27`)
 
 ### Running motioneye
 
