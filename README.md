@@ -1,6 +1,6 @@
 # motioneye-rootless
 
-Scripts to install and run motioneye withour root privileges (locally or in Docker)
+Scripts to install and run [motioneye](https://github.com/ccrisan/motioneye) withour root privileges (locally or in Docker)
 
 ## Local install
 
@@ -33,3 +33,5 @@ To circumvent SELinux, switch the `docker run ...` command in `start_motioneye_d
 All log, config and media files are saved in `$(pwd)/motioneye`
 
 To run Docker rootless, check out https://podman.io/
+
+Tested on Fedora 30 with Podman 1.6.1
