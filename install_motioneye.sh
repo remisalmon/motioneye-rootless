@@ -20,4 +20,4 @@ pip install --no-cache-dir pycurl
 
 mkdir -p MOTIONEYE_FOLDER
 
-cat venv27/share/motioneye/extra/motioneye.conf.sample | sed -e "s?/etc/motioneye?$MOTIONEYE_FOLDER?" -e "s?/var/run?$MOTIONEYE_FOLDER?" -e "s?/var/log?$MOTIONEYE_FOLDER?" -e "s?/var/lib/motioneye?$MOTIONEYE_FOLDER?" > $MOTIONEYE_FOLDER/motioneye.conf
+cat $VENV_FOLDER/share/motioneye/extra/motioneye.conf.sample | sed -e "s?/etc/motioneye?$MOTIONEYE_FOLDER?" -e "s?/var/run?$MOTIONEYE_FOLDER?" -e "s?/var/log?$MOTIONEYE_FOLDER?" -e "s?/var/lib/motioneye?$MOTIONEYE_FOLDER?" > $MOTIONEYE_FOLDER/motioneye.conf
