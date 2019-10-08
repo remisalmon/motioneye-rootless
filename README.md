@@ -1,4 +1,4 @@
-# Rootless motionEye
+# motionEye (rootless)
 
 Scripts to install and run [motioneye](https://github.com/ccrisan/motioneye) without root privileges (locally or in Docker)
 
@@ -6,15 +6,18 @@ Scripts to install and run [motioneye](https://github.com/ccrisan/motioneye) wit
 
 ### Installing motioneye
 
-Install motioneye dependencies (`motion ffmpeg v4l-utils`, see https://github.com/ccrisan/motioneye/wiki/Installation)
+Install the motioneye dependencies `motion ffmpeg v4l-utils python2-pip libcurl libjpeg`  
+(see https://github.com/ccrisan/motioneye/wiki/Manual-Download-And-Installation)
 
-Run `install_motioneye.sh` (installs motioneye to a Python2 virtual environment in `$(pwd)/venv27`)
+Run `install_motioneye.sh`
+
+motioneye will install in a Python2 virtual environment in `venv27/`
 
 ### Running motioneye
 
 Run `start_motioneye.sh`
 
-All log, config and media files are saved in `$(pwd)/motioneye`
+All log, config and media files are saved in `motioneye/`
 
 ## Docker install
 
@@ -22,18 +25,20 @@ All log, config and media files are saved in `$(pwd)/motioneye`
 
 Run `install_motioneye_docker.sh`
 
+motioneye will install to a `localhost/motioneye:latest` Docker image (399 MB)
+
 ### Running motioneye
 
 Run `start_motioneye_docker.sh`
 
-All log, config and media files are saved in `$(pwd)/motioneye`
+All log, config and media files are saved in `motioneye/`
 
-To change/add a camera, edit/add the `--device ...` field in `start_motioneye_docker.sh` (ex: `--device /dev/video0:/dev/video0`)
-
-To circumvent SELinux, switch the `docker run ...` command in `start_motioneye_docker.sh` (or write your own SELinux policy...)
+In `start_motioneye_docker.sh`:
+* To change/add a camera, edit/add the `--device ...` field  (ex: `--device /dev/video0:/dev/video0`)
+* To circumvent SELinux, add `--security-opt label=disable` to the `docker run ...` command (or write your own SELinux policy...)
 
 ## NOTES
 
-To run Docker rootless, check out https://podman.io/
+To run Docker rootless, check out [podman.io](https://podman.io/) (`alias docker=podman`)
 
 Tested on Fedora 30 with Podman 1.6.1
