@@ -4,6 +4,8 @@ VENV_FOLDER=$(pwd)/venv27
 
 MOTIONEYE_FOLDER=$(pwd)/motioneye
 
+rm -rf $VENV_FOLDER $MOTIONEYE_FOLDER
+
 python2 -m virtualenv $VENV_FOLDER
 
 source $VENV_FOLDER/bin/activate
