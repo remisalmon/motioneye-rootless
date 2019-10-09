@@ -10,7 +10,7 @@ python2 -m virtualenv $VENV_FOLDER
 
 source $VENV_FOLDER/bin/activate
 
-pip install --upgrade pip
+pip install --upgrade pip setuptools
 
 pip install motioneye
 
