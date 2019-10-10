@@ -33,10 +33,6 @@ Run `start_motioneye_docker.sh`
 
 All log, config and media files are saved in `motioneye/`
 
-In `start_motioneye_docker.sh`:
-* To change/add a camera, edit/add the `--device ...` field  (ex: `--device /dev/video0:/dev/video0`)
-* To circumvent SELinux, add `--security-opt label=disable` to the `docker run ...` command (or write your own SELinux policy...)
-
 ## NOTES
 
 To run Docker rootless, check out [podman.io](https://podman.io/) (`alias docker=podman`)
