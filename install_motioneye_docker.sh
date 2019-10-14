@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MOTIONEYE_FOLDER=$(pwd)/motioneye
+MOTIONEYE_FOLDER=motioneye
 
 rm -rf $MOTIONEYE_FOLDER
 
