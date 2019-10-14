@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VENV_FOLDER=$(pwd)/venv27
+VENV_FOLDER=venv27
 
 MOTIONEYE_FOLDER=$(pwd)/motioneye
 
